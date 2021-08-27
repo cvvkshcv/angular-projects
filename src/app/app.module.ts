@@ -12,9 +12,13 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from "@angular/material/button";
+import { MatDividerModule } from '@angular/material/divider';
+import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+
+
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 
-import { AppRoutingModule } from './app-routing.module';
 
 import { allRoutes } from './app-routing.module';
 
@@ -35,7 +39,9 @@ import { allRoutes } from './app-routing.module';
     MatInputModule,
     MatIconModule,
     MatButtonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
