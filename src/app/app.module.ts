@@ -10,10 +10,19 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from "@angular/material/button";
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+
+import { AppRoutingModule } from './app-routing.module';
+
+import { allRoutes } from './app-routing.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavBarComponent,
+    allRoutes
   ],
   imports: [
     BrowserModule,
@@ -23,7 +32,10 @@ import { MatInputModule } from '@angular/material/input';
     MatProgressBarModule,
     MatCardModule,
     MatChipsModule,
-    MatInputModule
+    MatInputModule,
+    MatIconModule,
+    MatButtonModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
