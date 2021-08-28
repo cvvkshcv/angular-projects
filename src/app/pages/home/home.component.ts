@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GetPostService } from 'src/app/services/get-post.service';
 
-interface Post {
+export interface Post {
   userId: number,
   id: number,
   title: string
