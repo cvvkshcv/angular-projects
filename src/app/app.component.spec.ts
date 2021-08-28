@@ -1,6 +1,5 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core'; // when angular test throws unknown element
 import { HomeComponent } from './pages/home/home.component';
 import { HttpClient } from '@angular/common/http';
@@ -12,7 +11,6 @@ describe('AppComponent', () => {
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
       declarations: [
         AppComponent,
-        NavBarComponent,
         HomeComponent
       ],
     }).compileComponents();

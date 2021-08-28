@@ -16,8 +16,6 @@ import { MatDividerModule } from '@angular/material/divider';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 
-import { NavBarComponent } from './nav-bar/nav-bar.component';
-
 
 import { allRoutes } from './app-routing.module';
 import { MatTableModule } from '@angular/material/table';
@@ -25,12 +23,14 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatListModule } from '@angular/material/list';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent,
-    allRoutes
+    allRoutes,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +50,8 @@ import { MatListModule } from '@angular/material/list';
     MatPaginatorModule,
     MatSortModule,
     LayoutModule,
-    MatListModule
+    MatListModule,
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
