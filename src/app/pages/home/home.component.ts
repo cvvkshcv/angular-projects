@@ -2,10 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { GetPostService } from 'src/app/services/get-post.service';
 
 interface Post {
-  userId: number,
-  id: number,
-  title: string
-  body: string
+  id: number
 };
 
 @Component({
@@ -14,17 +11,29 @@ interface Post {
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  isBtnClicked = false;
   allPosts:Post[] = [];
   constructor(private postService: GetPostService) { }
 
   ngOnInit(): void {
   }
 
+  isUserClickedBtn() {
+    this.isBtnClicked = true;
+  }
+
+  isLoggedIn() {
+    return localStorage.getItem('loggedIn') === 'true';
+  }
+
   getAllPosts() {
-    this.postService.getPosts().subscribe((data: any) => {
-      console.log(data);
-      this.allPosts = data;
-    });
+    if (this.isLoggedIn()) {
+      this.isUserClickedBtn();
+      this.postService.getPosts().subscribe((data: any) => {
+        console.log(data);
+        this.allPosts = data;
+      });
+    }
   }
 
 }
