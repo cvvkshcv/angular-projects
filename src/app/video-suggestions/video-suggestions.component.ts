@@ -7,33 +7,6 @@ import { YoutubeApiService } from '../services/youtube-api.service';
   styleUrls: ['./video-suggestions.component.scss']
 })
 export class VideoSuggestionsComponent implements OnInit {
-  videoSuggestions = [
-    {
-      image: 'thumbnail-1.jpg',
-      title: 'Matrix 4: Trailer',
-      channel: 'Trailer in Spanish',
-      views: 201000,
-      time: 1631178540
-    },{
-      image: 'thumbnail-2.jpg',
-      title: 'Apple Iphone 13 Leaks & Rumours | Let’s talk…',
-      channel: 'SRVTWIZ Tamil',
-      views: 1700,
-      time: 1630513740
-    },{
-      image: 'thumbnail-3.jpg',
-      title: 'Avengers infinity war',
-      channel: 'Marvel',
-      views: 1000000,
-      time: 1630559340
-    },{
-      image: 'thumbnail-4.jpg',
-      title: 'Mr Bean eats',
-      channel: 'Mr Bean',
-      views: 20100000,
-      time: 1599023340
-    }
-  ];
   videos: any;
   constructor(private youtubeService: YoutubeApiService) {}
 

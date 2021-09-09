@@ -12,7 +12,7 @@ export class YoutubeApiService {
   constructor(private http: HttpClient) { }
 
   getSearchResult(query: string) {
-    const key = 'AIzaSyA2ymnOZEtWnDfmxgCUcSJbCKcCEJTwZlU';
+    const key = '';
     const url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${query}&type=video&key=${key}`;
     return this.http.get(url);
   }
