@@ -47,6 +47,8 @@ export class VideoSuggestionsComponent implements OnInit {
     this.youtubeService.getSearchResult(searchString).subscribe((data: any) => {
       this.videos = data.items;
       this.youtubeService.setQuerying(false);
+    }, (err) => {
+      this.youtubeService.setQuerying(false);
     });
   }
 
