@@ -1,0 +1,44 @@
+.example-spacer {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-input-group {
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-input {
+  padding: .2rem 0.5rem 0;
+  min-width: 30rem;
+  box-sizing: content-box;
+  border: unset;
+  outline: unset;
+}
+.search-input-icon {
+  padding: .2rem 1.2rem;
+  border-left: 1px solid #ccc;
+  box-sizing: content-box;
+  cursor: pointer;
+}
+.pl-2 {
+  padding-left: .5rem;
+}
+.youtube-icon {
+  margin-left: 1rem;
+}
+.fixed-header {
+  width:100%;
+  position: fixed;
+  top:0;
+  z-index: 9;
+  border-bottom: 1px solid #dbdbdb;
+}
+.progress-bar {
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: absolute;
+}

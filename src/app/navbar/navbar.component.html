@@ -1,0 +1,66 @@
+
+<mat-toolbar color="light" class="fixed-header">
+  <mat-progress-bar mode="indeterminate" color="warn" class="progress-bar" *ngIf="loading"></mat-progress-bar>
+  <button mat-icon-button class="example-icon" (click)="toggleSideMenu()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  
+  <img src="/assets/img/logo.png" height="20"class="youtube-icon" />
+  <span class="example-spacer">
+    <div class="search-input-group">
+      <input type="email" matInput placeholder="Search" class="search-input" [(ngModel)]="query" (keyup.enter)="search()" />
+      <mat-icon class="search-input-icon" (click)="search()">search</mat-icon>
+    </div>
+    <mat-icon class="pl-2">mic</mat-icon>
+  </span>
+  <button mat-icon-button class="example-icon favorite-icon">
+    <mat-icon>video_call</mat-icon>
+  </button>
+  <button mat-icon-button class="example-icon favorite-icon">
+    <mat-icon>apps</mat-icon>
+  </button>
+
+  <!-- Noticiation start -->
+  <button mat-icon-button class="example-icon favorite-icon" [matMenuTriggerFor]="notification">
+    <mat-icon matBadge="8" matBadgePosition="after" matBadgeColor="warn">notifications</mat-icon>
+  </button>
+  <mat-menu #notification="matMenu">
+    <button mat-menu-item>
+      <mat-icon>dialpad</mat-icon>
+      <span>Redial</span>
+    </button>
+    <button mat-menu-item disabled>
+      <mat-icon>voicemail</mat-icon>
+      <span>Check voice mail</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>notifications_off</mat-icon>
+      <span>Disable alerts</span>
+    </button>
+  </mat-menu>
+  <!-- Noticiation end -->
+
+  <!-- User account logged in -->
+  <button mat-icon-button class="example-icon" [matMenuTriggerFor]="menu">
+    <img src="/assets/img/logo.png" width="20" />
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>account_box</mat-icon>
+      <span>Your channel</span>
+    </button>
+    <button mat-menu-item disabled>
+      <mat-icon>paid</mat-icon>
+      <span>Purchases and memberships</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>settings</mat-icon>
+      <span>Youtube Studio</span>
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item>
+      <mat-icon>logout</mat-icon>
+      <span>Sign out</span>
+    </button>
+  </mat-menu>
+</mat-toolbar>

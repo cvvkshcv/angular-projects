@@ -1,0 +1,21 @@
+.example-container {
+  width: 100%;
+}
+.material-drawer-fixed {
+  position: fixed;
+}
+.content-container {
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 25px;
+  overflow: auto;
+}
+.mat-drawer.mat-drawer-side {
+  border: 0;
+  position: fixed;
+  top: 4rem;
+}
+:host {
+  display: block;
+  padding-top: 4.02rem;
+}

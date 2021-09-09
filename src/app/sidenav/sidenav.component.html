@@ -1,0 +1,13 @@
+<section class="side-nav">
+  <mat-list class="nav">
+    <div *ngFor="let menu of menuList">
+      <mat-divider *ngIf="menu.line;else elsePart"></mat-divider>
+      <ng-template #elsePart>
+        <a mat-list-item>
+          <mat-icon mat-list-icon>{{ menu.icon }}</mat-icon>
+          <p matLine>{{ menu.text }}</p>
+        </a>
+      </ng-template>
+    </div>
+  </mat-list>
+</section>

@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-angular-app';
+  isExpanded = true;
+
+  toggleSideMenu(e: boolean) {
+    this.isExpanded = e;
+  }
 }

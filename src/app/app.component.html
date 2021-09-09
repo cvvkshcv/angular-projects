@@ -1,10 +1,23 @@
-<div class="home">
-  <h1>Welcome to Angular app</h1>
+<!-- Navbar start -->
+<app-navbar class="fixed-header" (openSideMenu)="toggleSideMenu($event)"></app-navbar>
+<!-- Navbar end -->
+<!-- Mat drawer start -->
+<mat-drawer-container class="example-container">
 
-  <mat-form-field class="example-chip-list" appearance="fill">
-    <mat-label>Favorite Fruits</mat-label>
-    <mat-chip-list #chipList aria-label="Fruit selection">
-      <mat-chip>Hello chips</mat-chip>
-    </mat-chip-list>
-  </mat-form-field>
-</div>
+  <!-- Left side menu start -->
+  <mat-drawer mode="side" opened>
+    <app-sidenav *ngIf="isExpanded"></app-sidenav>
+    <app-sidenavmin *ngIf="!isExpanded"></app-sidenavmin>
+  </mat-drawer>
+  <!-- Left side menu end -->
+
+  <!-- Main content start -->
+  <mat-drawer-content [ngStyle]="{'margin-left': !isExpanded ? '5rem' : '240px' }">
+    <div class="content-container">
+      <app-video-suggestions></app-video-suggestions>
+    </div>
+  </mat-drawer-content>
+  <!-- Main content end -->
+
+</mat-drawer-container>
+<!-- Mat drawer end -->
