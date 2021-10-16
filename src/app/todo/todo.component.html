@@ -1,0 +1,18 @@
+<h1>Todo</h1>
+<input type="text" [(ngModel)]="taskText" placeholder="Enter todo task" />
+<button (click)="onSave()">Save</button>
+
+<ul>
+  <!-- <app-todo-task
+    *ngFor="let todo of todos;let i = index;"
+    [done]="todo.done"
+    [task]="todo.task"
+    (onTaskChange)="onTaskChange($event, i)"
+  ></app-todo-task> -->
+  <!-- <li *ngFor="let todo of todos">
+    <input type="checkbox" [(ngModel)]="todo.done" />
+    <span [ngClass]="{'done': todo.done}">{{ todo.task }}</span>
+  </li> -->
+</ul>
+
+<button (click)="showPendingTasks()">Show pending Tasks</button>
