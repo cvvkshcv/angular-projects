@@ -1,0 +1,27 @@
+<div *ngIf="!isEditing">
+  <button class="btn btn-info text-white" (click)="editPost(true)">Edit</button>
+  <h3>{{ currentPost?.title }}</h3>
+  <p>{{ currentPost?.body }}</p>
+</div>
+
+<div *ngIf="isEditing">
+  <button class="btn btn-warning text-white" (click)="editPost(false)">Cancel</button>
+  <app-post-input
+    [title]="currentPost?.title"
+    [body]="currentPost?.body"
+    (onPostEdit)="getPost($event)"
+  ></app-post-input>
+  <button class="btn btn-success" (click)="updatePost()">Update</button>
+  <!-- <button class="btn btn-info text-white" (click)="editPost()">Edit</button>
+  <h3>{{ currentPost?.title }}</h3>
+  <p>{{ currentPost?.body }}</p> -->
+</div>
+
+<hr />
+<ul class="list-group">
+  <li *ngFor="let item of commentsSub | async" class="list-group-item"> 
+    <small>{{ item.email }}</small>
+    <p>{{ item.name }}</p>
+    <p>{{ item.body }}</p>
+  </li>
+</ul>

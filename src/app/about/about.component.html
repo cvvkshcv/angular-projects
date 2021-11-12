@@ -1,0 +1,4 @@
+<h1 *ngIf="hasError; else elsePart" class="text-danger">ERROR, NOT AUTHENTICATED</h1>
+<ng-template #elsePart>
+  <h1 class="text-success">SUCCESS</h1>
+</ng-template>

@@ -1,0 +1,13 @@
+<small appMyDirective>Add your post:</small>
+<app-post-input myDirective (onPostEdit)="getPost($event)"></app-post-input>
+<button class="btn btn-success my-4" (click)="save()">Add post</button>
+
+<ul class="list-group">
+  <li *ngFor="let item of items | async; let i = index" class="list-group-item">
+    Posted By: <span class="badge bg-secondary">{{ item.userId }}</span>
+    <h5>{{ item.title }}</h5>
+    <p>{{ item.body }}</p>
+    <button (click)="getComments(item)" class="btn btn-success btn-sm">Read post</button>
+    <button (click)="deletePost(item, i)" class="btn btn-danger btn-sm ml-4">Delete</button>
+  </li>
+</ul>
