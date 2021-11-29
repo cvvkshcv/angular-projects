@@ -10,10 +10,18 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './pages/home/home.component';
+import { ApiCallComponent } from './pages/api-call/api-call.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    ApiCallComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +31,9 @@ import { MatInputModule } from '@angular/material/input';
     MatProgressBarModule,
     MatCardModule,
     MatChipsModule,
-    MatInputModule
+    MatInputModule,
+    MatIconModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
