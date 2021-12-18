@@ -1,0 +1,28 @@
+<div class="m-5">
+  <button class="btn btn-primary" (click)="passDataToParent()">
+    Fetch data from backend api
+  </button>
+
+  <h1>Today is: {{ today | date }}</h1>
+  <h3>{{ num | multiply:4 }}</h3>
+  <h4>{{ multiply(num1, 4) }}</h4>
+  <hr />
+
+  <h1><a href="https://uigems.com">CV Vikash's website link</a></h1>
+
+  <ol class="list-group list-group-numbered">
+    <li
+      *ngFor="let user of userList"
+      (click)="getSingleUserDetail(user.id)"
+      class="list-group-item d-flex justify-content-between align-items-start"
+    >
+      <div class="ms-2 me-auto">
+        <div class="fw-bold">{{ user.name }} ( {{ user.username }} )</div>
+        <p>{{ user.company.name }}</p>
+        <p>{{ user.company.catchPhrase }}</p>
+        <p>Contact me: {{ user.phone }}</p>
+      </div>
+      <span class="badge bg-primary rounded-pill">{{ user.id }}</span>
+    </li>
+  </ol>
+</div>

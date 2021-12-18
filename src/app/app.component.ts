@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-angular-app';
+  text1 = 'This is title 1 input value';
+  title2 = 'This is title 2 input value';
+  title3 = 'This is title 3 input value';
+  title4 = 'This is title 4 input value';
+
+  captureKick (e: string) {
+    console.log(e);
+  }
 }
