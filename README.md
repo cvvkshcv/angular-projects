@@ -1,5 +1,6 @@
 ### This is the Road Map to complete Angular, it will be useful when learning:
 
+### [UI Gems](http://uigems.com) my website and linkedIn
 
 #### What is Angular?
 #### Interpolation
@@ -43,6 +44,4 @@
 #### LazyLoading
 
 
-Learn more from [here](http://uigems.com)
-
-### [UI Gems](http://uigems.com) my youtube channel
+### [UI Gems](http://uigems.com) my website and linkedIn
