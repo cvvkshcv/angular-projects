@@ -41,3 +41,8 @@
 #### Interceptor
 #### CanActive
 #### LazyLoading
+
+
+Learn more from [here](http://uigems.com)
+
+### [UI Gems](http://uigems.com) my youtube channel
