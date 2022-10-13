@@ -1,47 +1,49 @@
-<input type="text" [(ngModel)]="postId" placeholder="Enter post id to fetch" />
-<button (click)="getPostById()">Fetch</button>
 
-<p *ngIf="loading;else elsePart">Loading post...</p>
-<ng-template #elsePart>
-  <h3>{{ singlePost.title }}</h3>
-  <p>{{ singlePost.body }}</p>
-</ng-template>
+<div class="container">
+  <div class="row my-3">
 
-<input type="text" [(ngModel)]="postTitle" placeholder="Post title" />
-<input type="text" [(ngModel)]="postBody" placeholder="Post Content.." />
-<button (click)="addNewPost()">Add a post</button>
+    <h3>The chart is created from 10k dataset</h3>
 
-<!-- <app-custom-card>
-  <h1 heading>Angular learning</h1>
-  <p class="content">
-    This is angular course
-    <button>Read more</button>
-  </p>
-</app-custom-card> -->
-<!-- 
-<button (click)="showFlypanel()">Open flypanel</button>
+    <div class="d-flex">
+      <select class="form-select me-2" style="flex: 1;"
+        [(ngModel)]="category"
+      >
+        <option value="" selected>Select a category</option>
+        <option value="payment">Payment made</option>
+        <option value="age_group">Age group</option>
+        <option value="zip_code_3_digits">Zip code</option>
+        <option value="gender">Gender</option>
+        <option value="ethinicity">Ethinicity</option>
+        <option value="country">Country</option>
+        <option value="race">Race</option>
+        <option value="type_of_admission">Type of admission</option>
+        <!-- <option value="discharge_year">Discharge year</option> -->
+      </select>
+      
+      <button class="btn btn-primary" (click)="handleChange()">Update chart</button>
+    </div>
+  </div>
 
-<app-flypanel *ngIf="openFlypanel">
-  <app-flypanel-heading (closingFlypanel)="onClose($event)">
-    <p>Hello ng-content</p>
-  </app-flypanel-heading>
+  <div class="row">
+    <ng-container *ngIf="category !== '' && !loading">
+      <plotly-plot [data]="pie.data" [layout]="pie.layout"></plotly-plot>
+    </ng-container>
 
-  <app-flypanel-content>
-    <p>Some more content about me</p>
-    <p>Some more content about me</p>
-    <p>Some more content about me</p>
-    <p>Some more content about me</p>
-    <p>Some more content about me</p>
-    <p>Some more content about me</p>
-    <p>Some more content about me</p>
-    <p>Some more content about me</p>
-    <button>fasdfsd</button>
-  </app-flypanel-content>
+    <div class="alert alert-info text-center" *ngIf="category === '' && !loading">
+      <h4>Your data is fetched from API and it's ready, now you can select a category from dropdown to visualize the data</h4>
+    </div>
+    
+    <div class="alert alert-danger text-center" *ngIf="error">
+      <h4>Failed to fetch data</h4>
+      <button class="btn btn-warning" (click)="initData()">Click here to retry</button>
+    </div>
 
-  <app-flypanel-footer>
-    <p>This is some footer text</p>
-  </app-flypanel-footer>
-</app-flypanel> -->
+    <div class="text-center" *ngIf="loading">
+      <button class="btn btn-primary" type="button" disabled>
+        <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+        Loading your data...
+      </button>
+    </div>
 
-<app-comp-a></app-comp-a>
-<app-comp-b></app-comp-b>
+  </div>
+</div>
