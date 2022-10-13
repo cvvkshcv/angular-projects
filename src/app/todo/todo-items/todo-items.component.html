@@ -1,0 +1,13 @@
+<ul class="list-group mt-3 shadow-sm" id="todoList">
+  <li *ngFor="let item of listItems" class="list-group-item d-flex justify-content-between p-3">
+    <span>
+      <input type="checkbox" [checked]="item.status" (change)="checkBoxChanged(item.id, $event)" />
+      <span [ngClass]="{'strike': item.status }">{{ item.task }}</span>
+    </span>
+    <div>
+      <i class="bi bi-pencil-square"></i>
+      <i class="bi bi-trash" ></i>
+    </div>
+  </li>
+
+</ul>

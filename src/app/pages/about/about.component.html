@@ -1,0 +1,8 @@
+<p>about works!</p>
+<!-- <input type="text" [(ngModel)]="inputName" placeholder="enter your name" class="form-control" /> -->
+<input type="text" [(ngModel)]="id" placeholder="Enter id between 1 - 5000" class="form-control" />
+<button class="btn btn-success btn-sm mt-2" (click)="changeInputForLifeCycle()">Change ID</button>
+<app-lifecycle [name]="name" [id]="passingId"></app-lifecycle>
+
+
+<angular-editor id="editor2"></angular-editor>

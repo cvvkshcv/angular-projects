@@ -1,0 +1,11 @@
+<p>parent-wrapper works!</p>
+<!-- <div style="display: flex;justify-content: space-between;">
+  <app-sibling1></app-sibling1>
+  <app-sibling2></app-sibling2>
+</div> -->
+<button (click)="getAllBlog()">Get protected api</button>
+<ul>
+  <li *ngFor="let user of users">
+    {{ user.name }} & age is {{ user.age }} & country is {{ user.country }}
+  </li>
+</ul>

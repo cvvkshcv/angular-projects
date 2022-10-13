@@ -1,0 +1,25 @@
+<p>contact works!</p>
+
+<form [formGroup]="fg" (submit)="onSubmit()">
+  <input 
+    type="text"
+    class="form-control"
+    name="username"
+    placeholder="Enter your name"
+    formControlName="username"
+  />
+  <p>{{ nameInp.value }}</p>
+  <p>{{ nameInp.errors }}</p>
+  <p>{{ nameInp.valid }}</p>
+  <p>{{ nameInp.touched }}</p>
+  <input
+    type="text"
+    class="form-control"
+    name="email"
+    placeholder="Enter your email"
+    formControlName="email"
+  />
+  <button type="submit" class="btn btn-sm btn-primary">
+    Submit
+  </button>
+</form>

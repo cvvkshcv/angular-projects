@@ -1,0 +1,43 @@
+<!-- Component directive -->
+
+<!-- Structural directive -->
+<!-- ngIf, ngFor, ngSwitch -->
+
+<!-- Attribute directive -->
+<!-- ngModel, ngClass, ngStyle -->
+
+<hr />
+<div>
+  <button [disabled]="voted" (click)="vote()">Vote</button>
+  <h1 *ngIf="!voted">Not yet Voted</h1>
+  <h1 *ngIf="voted">Voted already</h1>
+</div>
+
+<ul>
+  <li *ngFor="let fruit of fruitnames">{{ fruit }}</li>
+</ul>
+
+<ul>
+  <li *ngFor="let user of users;let i = index; let first = first;let last = last;">
+    <p [ngClass]="{'red': first, 'green': last }">
+      <span>User ID: {{ user.id }}</span>
+      {{ user.name }} - Index is {{ i }}
+    </p>
+  </li>
+</ul>
+
+
+<select (change)="selectionChanged($event)">
+  <option>Select value</option>
+  <option value="a">A</option>
+  <option value="b">B</option>
+  <option value="c">C</option>
+  <option value="d">D</option>
+</select>
+
+<div [ngSwitch]="switchExample">
+  <div *ngSwitchCase="'a'">You selected A</div>
+  <div *ngSwitchCase="'b'">You selected B</div>
+  <div *ngSwitchCase="'c'">You selected C</div>
+  <div *ngSwitchCase="'d'">You selected D</div>
+</div>

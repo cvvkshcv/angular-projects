@@ -1,0 +1,92 @@
+<div class="alert alert-primary" role="alert">
+  A simple primary alert—check it out!
+</div>
+
+
+<!-- <div class="home">
+  <h1>Wecome to {{ title }} this is interpolation</h1>
+  <h3>Hello your username is: {{ username }} Mr. </h3>
+  {{ 10 + 10 }}
+  {{ (false) ? 10: 120 }}
+</div> -->
+
+<!-- [className]=" 'red-text another-class border-class'" -->
+<!-- [class.blackText]="true" -->
+<!-- [ngClass]="['class1', 'class2', 'class3']" -->
+<!-- 
+<input
+  type="text"
+  name="fasdf"
+  [disabled]="dis"
+  [value]="title"
+  [ngClass]="ngClassExample"
+  [placeholder]="placeholderText"
+/>
+
+
+<input
+  type="text"
+  [style.border]="'4px solid red'"
+  [style.background-color]="'green'"
+  [style.color]="'white'"
+  [style.font-size.px]="25"
+
+  [ngStyle]="ngStyleProp"
+/>
+
+<button (click)="btnClicked('You clicked me')">Click me</button>
+<button (dblclick)="btnClicked('You double clicked me')">Double click me</button>
+<button (mouseover)="btnClicked('You mouse overed me')">Mouse over me</button>
+<button (mouseout)="btnClicked('You went out of')">Mouse out</button>
+
+
+<input type="text" (keyup)="inputChanged($event)" />
+<input type="text" [(ngModel)]="username" (ngModelChange)="modelHandler()" />
+
+<select (change)="dropdownChanged($event)">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+</select> -->
+
+
+<!-- <app-struct-dir></app-struct-dir> -->
+
+<!-- <div class="container">
+  <div class="row">
+    <app-child
+      class="col-md-4 mb-3"
+      *ngFor="let user of users"
+      [imageUrl]="user.imageUrl"
+      [name]="user.name"
+      [message]="user.message"
+      (userSelected)="userSelect($event)"
+    >
+    </app-child>
+  </div>
+</div> -->
+
+<!-- pub/sub -->
+<!-- <app-todo>
+  <app-todo-form (onAdd)="getNewTodoItem($event)"></app-todo-form>
+  <app-todo-items [listItems]="listItems" (onStatusChange)="onStatusChange($event)" ></app-todo-items>
+</app-todo>
+
+<button (click)="openModal()">Open modal</button>
+<app-modal [isOpen]="isModalOpen" [title]="'App comp'" [body]="'This modal is inside app comp'" (onClose)="handleModalClose()"></app-modal> -->
+<!-- 
+<h1>{{ mytext | uppercase }}</h1>
+<h1>{{ mytext | lowercase }}</h1>
+<h1>{{ mytext | titlecase }}</h1>
+
+<p> {{ mydate | date: 'medium' }}</p>
+<p> {{ mydate | date: 'short' }}</p>
+<p> {{ mydate | date: 'longDate' }}</p>
+<p> {{ mydate | date: 'fullDate' }}</p>
+<p> {{ mydate | date: 'dd-MM-yy HH:mm' }}</p> -->
+
+<!-- <pre>{{ myjson | json }}</pre> -->
+
+<!-- <p>{{ mynumber | myCurrency:'USD' }}</p> -->
+
+<!-- <p *ngFor="let arr of myarr | slice: 0:3">{{ arr }}</p> -->

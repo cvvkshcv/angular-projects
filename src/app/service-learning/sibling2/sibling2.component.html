@@ -1,0 +1,5 @@
+<p>sibling2 works!</p>
+<pre>{{ helloService.data }}</pre>
+
+<button (click)="subscribe()" *ngIf="!isSubscribed">Subscribe to channel</button>
+<button (click)="unsubscribe()" *ngIf="isSubscribed">Unsubscribe</button>

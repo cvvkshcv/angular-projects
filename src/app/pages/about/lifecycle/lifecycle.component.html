@@ -1,0 +1,15 @@
+<p>lifecycle works!</p>
+<!-- Current name: {{ name }} -->
+Current id is: {{ id }}
+
+<!-- Template  ref variable -->
+
+<input type="text" #myinput />
+<button class="btn btn-primary" (click)="showInput(myinput)">Show myinput</button>
+
+<div class="spinner-border" role="status" *ngIf="loading">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div *ngIf="!loading">
+ <img [src]="data?.thumbnailUrl" />
+</div>
