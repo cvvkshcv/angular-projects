@@ -1,5 +1,5 @@
-import { AfterViewInit, Component, OnInit, ViewChild, ViewChildren } from '@angular/core';
-import { ChildTwoComponent } from './child-two/child-two.component';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -7,31 +7,15 @@ import { ChildTwoComponent } from './child-two/child-two.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit, AfterViewInit {
-  name = '-Vikash-';
-
-  @ViewChild('abc', { static: true }) inputDom: any;
-
-  @ViewChildren(ChildTwoComponent) childTwoInstance: ChildTwoComponent | null = null;
-
-  ngOnInit() {
-    // console.clear();
-    // console.log(document.getElementById('abc'));
-    console.log(`On init `, this.childTwoInstance);
-    // this.childTwoInstance?.showMyName();
+export class AppComponent implements OnInit {
+  
+  constructor(private router: Router) {}
+  ngOnInit(): void {
+    console.log('On Init'); 
   }
 
-  ngAfterViewInit() {
-    console.log(`On afterview init `, this.childTwoInstance);
-    // console.log(this.inputDom.nativeElement);
+  redirectToAboutPage() {
+    this.router.navigate(['/about']);
   }
-
-  handleClick(e: any) {
-    console.log(e);
-    console.log('Button clicked');
-  }
-
-  handleVikash(e: any) {
-    console.log('Handling custom event ', e);
-  }
+  
 }
