@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -13,6 +13,9 @@ import { Page1Component } from './page1/page1.component';
 import { Page2Component } from './page2/page2.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { UserComponent } from './user/user.component';
+import { ModifyInterceptor } from './modify.interceptor';
+import { SubHomeComponent } from './home/sub-home/sub-home.component';
+import { AnotherSubHomeComponent } from './home/another-sub-home/another-sub-home.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,9 @@ import { UserComponent } from './user/user.component';
     Page1Component,
     Page2Component,
     NotFoundComponent,
-    UserComponent
+    UserComponent,
+    SubHomeComponent,
+    AnotherSubHomeComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +38,8 @@ import { UserComponent } from './user/user.component';
     ReactiveFormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

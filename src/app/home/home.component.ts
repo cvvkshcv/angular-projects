@@ -1,27 +1,26 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
-  constructor(private route: Router, private router: ActivatedRoute) { }
+  @ViewChild('input1', { static: true }) input1: ElementRef = {} as ElementRef;
+  constructor() {}
 
-  ngOnInit(): void {
-    // console.log(this.router.snapshot.queryParams);
-    this.router.params.subscribe(data => console.log(data));
-    this.router.queryParams.subscribe(data => console.log(data));
+  ngOnInit() {
+    console.log(this.input1.nativeElement);
   }
 
-  gotoPage(page: number) {
-    if (page === 1) {
-      this.route.navigate(['home', 'page1'], { queryParams: { name: 'Vikash' }});
-    } else {
-      this.route.navigate(['home', 'page2'], { queryParams: { name: 'Cv Vikash' }});
-    }
+  ngAfterViewInit() {
+    console.log(this.input1.nativeElement);
   }
 
+  getInput(input: HTMLInputElement) {
+    console.log(input);
+    input.classList.add('myinput');
+    input.value = "ABCD"
+  }
 }

@@ -21,7 +21,7 @@ const routes: Routes = [
   // { path: 'user/:id', component: UserComponent, canActivate: [AuthGuard] },
   { path: 'user', loadChildren: () => import('./user/user.module').then(m => m.UserModule) },
   { path: 'not-found', component: NotFoundComponent },
-  { path: '**', redirectTo: '/not-found', pathMatch: 'full'}
+  // { path: '**', redirectTo: '/not-found', pathMatch: 'full'}
 ]
 
 @NgModule({

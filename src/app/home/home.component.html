@@ -1,5 +1,25 @@
-<p>home works!</p>
+<div>
+  <h1>Home component</h1>
+  <p>This is some text</p>
+  <input type="text" #input1 />
+  <button (click)="getInput(input1)">Click me</button>
+  <h3>Another heading</h3>
+  <p>This is some other text</p>
+  <canvas></canvas>
+</div>
 
-<button (click)="gotoPage(1)">Page 1</button>
-<button (click)="gotoPage(2)">Page 2</button>
-<router-outlet></router-outlet>
+<li
+  routerLinkActive="active"
+  [routerLinkActiveOptions]="{exact: true}"
+>
+  <a [routerLink]="['/']">
+    Home
+  </a>
+</li>
+
+  <!--
+  ElementRef & TemplateRef both are useful when it comes
+  to access the direct DOM elements.
+
+  Follow me on LinkedIn @ CV Vikash
+-->
