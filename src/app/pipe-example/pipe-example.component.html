@@ -1,0 +1,54 @@
+<div class="container">
+  <details>
+    <summary>Interview questions</summary>
+    <h2>1. What are pipes in Angular?</h2>
+    <h4>
+      <ul>
+        <li>Pipes are special functions that can be exectued from view/HTML,<br />but
+          the syntax is little different when comparing to normal function call</li>
+        <li>We have to use <code> | </code> symbol for consuming a pipe</li>
+        <li>Syntax: <code>{{ "{{ accountBalance | currency: 'INR' }}" }}</code></li>
+        <li>We also have some built-in pipes. We can also create custom pipes in Angular.</li>
+        <li><i>We are also going to see some example to understand pipes.</i></li>
+      </ul>
+    </h4>
+    
+    <hr />
+
+    <h2>2. Name some built-in pipes?</h2>
+    <ul>
+      <li>lowecase</li>
+      <li>uppercase</li>
+      <li>json</li>
+      <li>date ("MM/dd/yy", "h:mm a", "long", "short", "shortDate" )</li>
+      <li>currency (:'EUR':'Euros ')</li>
+    </ul>
+
+    <hr />
+
+    <h2>3. Why do we need pipes?</h2>
+    <ul>
+      <li>Pipes are re-usable functions</li>
+      <li>Pure pipes can improve the application performance</li>
+    </ul>
+    
+    <hr />
+    
+    <h2>4. Pipe chaining</h2>
+    <ul>
+      <li><code>{{ "{{ name | uppercase | lowecase }}" }}</code></li>
+    </ul>
+    
+    <hr />
+    
+    <h2>5. Pure vs Impure pipes?</h2>
+  </details>
+
+  
+  <p>{{ name | uppercase }}</p>
+  <p>{{ upperCase(name) }}</p>
+
+  <p>{{ name | upper }}</p>
+
+  <button (click)="changeCount()">Incr</button>
+</div>

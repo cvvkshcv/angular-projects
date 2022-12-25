@@ -10,6 +10,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { UserComponent } from './user/user.component';
 import { AuthGuard } from './auth.guard';
 import { Auth1Guard } from './auth1.guard';
+import { CrudComponent } from './crud/crud.component';
+import { PipeExampleComponent } from './pipe-example/pipe-example.component';
+import { ModulesExampleComponent } from './modules-example/modules-example.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent, canActivateChild: [Auth1Guard], children: [
@@ -18,9 +21,13 @@ const routes: Routes = [
   ] },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
-  // { path: 'user/:id', component: UserComponent, canActivate: [AuthGuard] },
+  { path: 'crud', component: CrudComponent },
+  { path: 'pipes', component: PipeExampleComponent },
+  { path: 'modules', component: ModulesExampleComponent },
   { path: 'user', loadChildren: () => import('./user/user.module').then(m => m.UserModule) },
+  { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) },
   { path: 'not-found', component: NotFoundComponent },
+  // { path: 'user/:id', component: UserComponent, canActivate: [AuthGuard] },
   // { path: '**', redirectTo: '/not-found', pathMatch: 'full'}
 ]
 

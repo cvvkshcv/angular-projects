@@ -16,6 +16,10 @@ import { UserComponent } from './user/user.component';
 import { ModifyInterceptor } from './modify.interceptor';
 import { SubHomeComponent } from './home/sub-home/sub-home.component';
 import { AnotherSubHomeComponent } from './home/another-sub-home/another-sub-home.component';
+import { CrudComponent } from './crud/crud.component';
+import { PipeExampleComponent } from './pipe-example/pipe-example.component';
+import { UpperPipe } from './pipe-example/upper.pipe';
+import { ModulesExampleComponent } from './modules-example/modules-example.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,11 @@ import { AnotherSubHomeComponent } from './home/another-sub-home/another-sub-hom
     NotFoundComponent,
     UserComponent,
     SubHomeComponent,
-    AnotherSubHomeComponent
+    AnotherSubHomeComponent,
+    CrudComponent,
+    PipeExampleComponent,
+    UpperPipe,
+    ModulesExampleComponent,
   ],
   imports: [
     BrowserModule,
